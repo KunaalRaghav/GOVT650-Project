@@ -1,0 +1,32 @@
+---
+title: "Public Transit: Fixing the Pains of Traffic?-  Graphs"
+author: "Kunaal Raghav"
+format: pdf
+editor: visual
+---
+
+## Installation of Packages
+
+In order to run the code properly, please install and library the packages in the following code chunk. If you don't have the requisite packages installed, please delete the comment in front of the "install.package" line ( the #), install once, and then delete the those lines of code. Only keep the "library()" codes
+
+```{r}
+#install.packages("tidyverse")
+library(tidyverse)
+```
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
