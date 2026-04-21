@@ -12,21 +12,40 @@ In order to run the code properly, please install and library the packages in th
 ```{r}
 #install.packages("tidyverse")
 library(tidyverse)
+library(readxl)
 ```
 
-## Running Code
+## Overview of Data Sources
+
+Data for each of the three public transit systems was obtained through a variety of different sites. Each of sections detail where the sources were obtained, what the sources are , what they measure, how they look like, and present graphs that will be detailed in the upcoming policy section
+
+## DC Metro's System
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
-1 + 1
+Sources<- read_xlsx("C:/Users/xbox/OneDrive/Collect Files/Collect Files/MPP- Graduate  AU/Graduate Paperwork/PUAD 650/Boardings by Month.xlsx")
+
 ```
 
 You can add options to executable code like this
 
 ```{r}
 #| echo: false
-2 * 2
+
+
+ggplot(Sources, aes(x = Year, y = TF2)) +
+  geom_col(fill = "steelblue") +
+  labs(
+    title = "Ridership per Year",
+    x = "Year",
+    y = "Ridership (in the the Thousands)"
+  )
+
+
+
+
+
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
